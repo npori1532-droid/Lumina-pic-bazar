@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/12310/12310639.png" />
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/12310/12310639.png">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="LuminaPic Bazaar - Top source for Hacking Logos, Hacking Photos, Vector Art, and Anime DPs. Developed by Tech Master.">
+    <meta name="keywords" content="Hacking Photo, Hacking Logo, Vector Art, Cartoon Pic, Social Pic, Couple DP, Cute Girl, Anime, 3D Art, Tech Master, Wallpaper, DP">
+    <meta name="theme-color" content="#020203" />
+    <title>LuminaPic Bazaar | 3D Hacking & Art Gallery by Tech Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700;900&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+              tech: ['Rajdhani', 'sans-serif'],
+            },
+            colors: {
+              accent: {
+                DEFAULT: '#00f3ff', // Cyan Neon
+                glow: '#00f3ff',
+                secondary: '#bc13fe', // Neon Purple
+                tertiary: '#00ff9d', // Hacker Green
+              },
+              dark: {
+                950: '#020203', // Darker black
+                900: '#0a0a0f',
+                800: '#12121a',
+                700: '#1e1e2e',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'spin-slow': 'spin 8s linear infinite',
+              'spin-reverse': 'spin 10s linear infinite reverse',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glitch': 'glitch 1s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              glitch: {
+                '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
+                '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
+                '62%': { transform: 'translate(0,0) skew(5deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020203;
+        color: #fff;
+        overflow-x: hidden;
+      }
+      
+      /* CRT Scanline Effect */
+      body::after {
+        content: " ";
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+        z-index: 2;
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+      }
+
+      /* 3D Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020203;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #00f3ff, #bc13fe);
+        border-radius: 4px;
+        border: 2px solid #020203;
+      }
+      
+      .text-glow {
+        text-shadow: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.5);
+      }
+      
+      .neon-border {
+        box-shadow: 0 0 5px #00f3ff, inset 0 0 5px #00f3ff;
+      }
+
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      
+      /* Custom Clip Path for Folder Tabs */
+      .folder-shape {
+        clip-path: polygon(0 0, 80% 0, 90% 20%, 100% 100%, 0% 100%);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "three": "https://esm.sh/three@^0.182.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.5.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+  </body>
+</html>

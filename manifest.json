@@ -1,0 +1,47 @@
+{
+  "name": "LuminaPic Bazaar",
+  "short_name": "LuminaPic",
+  "description": "Top source for Hacking Logos, Vector Art, and Anime DPs. Powered by Tech Master.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020203",
+  "theme_color": "#00f3ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/12310/12310639.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/12310/12310639.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Hacking Logo",
+      "short_name": "Hacking",
+      "description": "Browse Hacking Logos",
+      "url": "/?category=hacking-logo",
+      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/2092/2092663.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Vector Art",
+      "short_name": "Vector",
+      "description": "Cool Vector Arts",
+      "url": "/?category=vector-art",
+      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/3344/3344338.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Anime DP",
+      "short_name": "Anime",
+      "description": "Cute Anime Profiles",
+      "url": "/?category=cartoon-pic",
+      "icons": [{ "src": "https://cdn-icons-png.flaticon.com/512/1864/1864887.png", "sizes": "192x192" }]
+    }
+  ]
+}
